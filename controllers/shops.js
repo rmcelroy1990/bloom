@@ -43,12 +43,12 @@ router.get('/:shopId', async (req, res) => {
         res.redirect('/');
     }
 });
-router.delete('shopId', async (req, res) => {
+router.delete('/:shopId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
         currentUser.shops.id(req.params.shopId).deleteOne();
         await currentUser.save();
-        res.redirect(`users/${currentUser._id}/shops`);
+        res.redirect(`/users/${currentUser._id}/shops`);
     } catch (error) {
         console.log(error);
         res.redirect('/');
@@ -67,5 +67,20 @@ router.get('/:shopId/edit', async (req, res) => {
       res.redirect('/');
     }
   });
+
+router.put('/:shopId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const shop = currentUser.shops.id(req.params.shopId);
+        shop.set(req.body);
+        await currentUser.save();
+        res.redirect(
+            `/users/${currentUser._id}/shops/${req.params.shopId}`
+        );
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
   
 module.exports = router;
