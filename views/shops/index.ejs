@@ -9,5 +9,14 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Shops</h1>
     <a href="/users/<%=user._id%>/shops/new">Add a Shop</a>
+    <ul>
+        <% shops.forEach((shop)=>{ %>
+        <li>
+            <a href="/users/<%= user._id %>/shops/<%= shop._id %>">
+                <%= shop.title %> at <%= shop.company %>
+            </a>
+        </li>
+        <% }) %>
+      </ul>
   </body>
 </html>

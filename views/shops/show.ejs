@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= shop.title %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= shop.title %> at <%= shop.company %></h1>
+    <% if (shop.notes) { %>
+    <p>Notes: <%= shop.notes %></p>
+    <% } %> <% if (shop.postingLink) { %>
+    <a href="<%= shop.postingLink %>">View shop posting</a>
+    <% } %>
+    <p>Current Status: <%= shop.status %></p>
+  </body>
+</html>
