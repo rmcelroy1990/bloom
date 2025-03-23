@@ -17,8 +17,8 @@ const shopSchema= new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ['offersDelivery', 'ordered', 'localDeliverOnly',],
-  }
+    enum: ['offersDelivery', 'ordered', 'localDeliveryOnly', 'instagramWorthy'],
+  },
 });
 
 const userSchema = mongoose.Schema({

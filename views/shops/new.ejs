@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New Shop</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Shop</h1>
+    <form action="" method="">
+        <label for="company">Company:</label>
+        <input type="text" name="company" id="company" />
+      
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" />
+      
+        <label for="reviews">Reviews:</label>
+        <textarea name="reviews" id="reviews"></textarea>
+      
+        <label for="postingLink">Posting Link:</label>
+        <input type="text" name="postingLink" id="postingLink" />
+      
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="offersDelivery">Offers Delivery</option>
+          <option value="ordered">Ordered</option>
+          <option value="localDeliveryOnly">Local Delivery Only</option>
+          <option value="instagramWorthy">Instagram Worthy</option>
+        </select> 
+        <button type="submit">Add Shop</button>
+    </form>
+  </body>
+</html>
