@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing Shop <%= shop.title %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit Shop <%= shop.title %> at <%= shop.company %></h1>
+    <form 
+        action="/users/<%= user._id %>/shops/<%= shop._id %>?_method=PUT" 
+        method="POST"
+    >
+        <label for="company">Company:</label>
+        <input 
+            type="text" 
+            name="company" 
+            id="company" 
+            value="<%= shop.company %>" 
+        >
+        <label for="location">Location:</label>
+        <input 
+            type="text" 
+            name="location" 
+            id="location" 
+            value="<%= shop.company %>"
+        >
+        <label for="reviews">Leave Review:</label>
+        <textarea name="reviews" id="reviews"></textarea>
+        <label for="postingLink">Website:</label>
+        <input 
+            type="text" 
+            name="postingLink" 
+            id="postingLink" 
+            value="<%= shop.company %>" 
+        >
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option 
+            value="offersDelivery"
+            <%= shop.status === 'offersDelivery' ? 'selected' : '' %>
+            >
+            Offers Delivery
+        </option>
+        <option 
+          value="ordered"
+          <%= shop.status === 'ordered' ? 'selected' : '' %>
+          >
+          Ordered
+        </option>
+          <option 
+            value="localDeliveryOnly"
+            <%= shop.status === 'localDeliveryOnly' ? 'selected' : '' %>
+          >
+          Local Delivery Only
+        </option>
+        <option 
+            value="instagramWorthy"
+            <%= shop.status === 'instagramWorthy' ? 'selected' : '' %>
+        >
+        Instagram Worthy
+    </option>
+    </select> 
+        <button type="submit">Add Shop</button>
+    </form>
+</body>
+</html>

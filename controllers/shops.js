@@ -55,4 +55,17 @@ router.delete('shopId', async (req, res) => {
     }
 })
 
+router.get('/:shopId/edit', async (req, res) => {
+    try {
+      const currentUser = await User.findById(req.session.user._id);
+      const shop = currentUser.shops.id(req.params.shopId);
+      res.render('shops/edit.ejs', {
+        shop: shop,
+      });
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
+  
 module.exports = router;
