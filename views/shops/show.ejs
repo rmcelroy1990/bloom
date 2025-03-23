@@ -11,8 +11,14 @@
     <% if (shop.notes) { %>
     <p>Notes: <%= shop.notes %></p>
     <% } %> <% if (shop.postingLink) { %>
-    <a href="<%= shop.postingLink %>">View shop posting</a>
+    <a href="<%= shop.postingLink %>">View shop listing</a>
     <% } %>
     <p>Current Status: <%= shop.status %></p>
+    <form
+        action="/users/<%= user._id %>/shops/<%= shop._id %>?_method=DELETE"
+        method="POST"
+    >
+        <button type="submit">Delete this shop</button>
+    </form>
   </body>
 </html>
