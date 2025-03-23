@@ -8,17 +8,17 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Shop</h1>
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/shops" method="POST">
         <label for="company">Company:</label>
         <input type="text" name="company" id="company" />
       
         <label for="location">Location:</label>
         <input type="text" name="location" id="location" />
       
-        <label for="reviews">Reviews:</label>
+        <label for="reviews">Leave Review:</label>
         <textarea name="reviews" id="reviews"></textarea>
       
-        <label for="postingLink">Posting Link:</label>
+        <label for="postingLink">Website:</label>
         <input type="text" name="postingLink" id="postingLink" />
       
         <label for="status">Status:</label>
