@@ -50,13 +50,6 @@ app.use('/auth', authController);
 app.use(isSignedIn);
 app.use('/users/:userId/shops', shopsController);
 
-// app.get('/garden-lounge', (req, res) => {
-//   if (req.session.user) {
-//     res.send(`Welcome to the garden ${req.session.user.username}.`);
-//   } else {
-//     res.send('Sorry, you havent been pruned yet.');
-//   }
-// });
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
