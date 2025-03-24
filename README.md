@@ -14,4 +14,18 @@ I created this app because I enjoy buying, gifting, and receiving flowers on a r
   1. **Deployed App:**
   2. **Planning Material:** https://trello.com/invite/b/67d472755795d995d0ee3980/ATTI8bea66ceca2f0aafadecde2120ca3280EFDBA343/my-trello-board
 
-**<b><h2>Attributions:</b></h2>**
+**<b><h3>Attributions:</b></h3>**
+1. [GitHub Template](https://pages.github.com/)
+2. [Google Fonts](https://fonts.google.com/)
+3. [Adobe](https://color.adobe.com/)
+4. [Gify](https://giphy.com/)
+
+**<b><h3>Technologies used:</b></h3>**
+* Express js
+* Javascript
+* MONGODB
+* Node.js
+* CSS
+* EJS
+
+**<b><h4>Next steps:</b></h4>** Some stretch goals I have is to learn more about UI/UX so I have create beautiful cohesive sites, gain more confidence in software development and continue to push my comfort levels. I would like users to be able to add photos of the arrangements they purchase from the floral shops! Or even leave cute notes like you would a bouquet instead of reviews! :love_letter:
