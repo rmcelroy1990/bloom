@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>Floral Shop Tracker</title>
 </head>
-<body>
-    <%- include('./partials/_navbar.ejs') %>
-    <h1>Little Shop of Flowers</h1>
-    <p>Let your floral app be a garden of possibilities, where every click cultivates a moment of joy</p>
-    <!-- <a href="/auth/sign-up">Sign up</a> or
-    <a href="/auth/sign-in">Sign in</a>. -->
-    <!-- <p><a href="/garden-lounge">Get into the VIP Users Only Garden lounge!</a></p> -->
+<body class="index-body">
+  <%- include('./partials/_navbar.ejs') %>
+  <div class="index-container">
+    <div class="text-container">
+      <h1 class="main-header">Bloom</h1>
+      <p class="subheader">Let your floral app be a garden of possibilities, where every click cultivates a moment of joy!</p>
+    </div>
+    <div class="auth-links">
+      <a class="signup-link" href="/auth/sign-up">Sign Up</a>
+      <a class="signin-link" href="/auth/sign-in">Sign In</a>
+    </div>
+  </div>
 </body>
 </html>

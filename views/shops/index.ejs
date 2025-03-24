@@ -3,20 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Your Shops</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Your Shops</h1>
-    <a href="/users/<%=user._id%>/shops/new">Add a Shop</a>
+    <div class="all-apps-body">
+      <div class="app-apps-header">
+        <h1>Your Shops</h1>
+    <a class="add-app-link" href="/users/<%=user._id%>/shops/new"
+      >Add a Shop</a>
+      >
+    </div>
     <ul>
         <% shops.forEach((shop)=>{ %>
-        <li>
-            <a href="/users/<%= user._id %>/shops/<%= shop._id %>">
-                <%= shop.title %> at <%= shop.company %>
-            </a>
-        </li>
+        <a href="/users/<%= user._id %>/shops/<%= shop._id %>">
+          <li><%= shop.title %> at <%= shop.company %></li>
+        </a>
         <% }) %>
       </ul>
+    </div>
+    </body>
   </body>
 </html>

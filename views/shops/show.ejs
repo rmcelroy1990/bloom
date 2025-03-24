@@ -3,25 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= shop.title %></title>
   </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
-    <h1><%= shop.title %> at <%= shop.company %></h1>
-    <% if (shop.notes) { %>
-    <p>Notes: <%= shop.notes %></p>
-    <% } %> <% if (shop.postingLink) { %>
-    <a href="<%= shop.postingLink %>">View shop listing</a>
-    <% } %>
-    <p>Current Status: <%= shop.status %></p>
-    <a href="/users/<%= user._id %>/shops/<%= shop._id %>/edit">
-        Edit this shop
-      </a>
-    <form
-        action="/users/<%= user._id %>/shops/<%= shop._id %>?_method=DELETE"
-        method="POST"
-    >
-        <button type="submit">Delete this shop</button>
-    </form>
-  </body>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <div class="show-body">
+    <div class="show-header">
+      <h1><%= shop.title %> at <%= shop.company %></h1>
+      <div class="show-sidebar">
+        <div class="show-actions">
+          <a
+            href="/users/<%= user._id %>/shops/<%= shop._id %>/edit"
+          >
+            Edit Shop
+          </a>
+          <form
+            action="/users/<%= user._id %>/shops/<%= shop._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button type="submit">Delete Shop</button>
+          </form>
+        </div>
+        <p>Current Status: <%= shop.status %></p>
+      </div>
+    </div>
+    <div class="show-notes-container">
+      <% if (shop.postingLink) { %>
+      <a href="<%= shop.postingLink %>" target="_blank"
+        >View Shop Site</a
+      >
+      <% } %> <% if (shop.notes) { %>
+      <div class="show-notes">
+        <h2>Notes:</h2>
+        <p><%= shop.notes %></p>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</body>
 </html>
