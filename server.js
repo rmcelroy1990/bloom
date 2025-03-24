@@ -13,7 +13,7 @@ const authController = require('./controllers/auth.js');
 
 const shopsController = require('./controllers/shops.js');
 
-const port = process.env.PORT ? process.env.PORT : '3000';
+const PORT = process.env.PORT ? process.env.PORT : '3000';
 
 const path = require('path');
 
