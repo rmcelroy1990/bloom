@@ -51,6 +51,6 @@ app.use(isSignedIn);
 app.use('/users/:userId/shops', shopsController);
 
 
-app.listen(port, () => {
-  console.log(`The express app is ready on port ${port}!`);
+app.listen(PORT, () => {
+  console.log(`The express app is ready on port ${PORT}!`);
 });
