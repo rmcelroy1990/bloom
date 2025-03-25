@@ -11,7 +11,7 @@ I created this app because I enjoy buying, gifting, and receiving flowers on a r
 
 
 **<b><h2>Getting Started:</h2></b>**
-  1. **Deployed App:**
+  1. **Deployed App:** https://bloom-project-app-9dad7ecf7b47.herokuapp.com/
   2. **Planning Material:** https://trello.com/invite/b/67d472755795d995d0ee3980/ATTI8bea66ceca2f0aafadecde2120ca3280EFDBA343/my-trello-board
 
 **<b><h3>Attributions:</b></h3>**
